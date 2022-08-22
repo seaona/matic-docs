@@ -17,6 +17,7 @@ The Polygon Edge has two types of private keys that it directly manages:
 
 * **Private key used for the consensus mechanism**
 * **Private key used for networking by libp2p**
+* **(Optional) BLS Private key used for the consensus mechanism to aggregate validators' signatures**
 
 Currently, the Polygon Edge doesn't offer support for direct account management.
 
@@ -54,6 +55,12 @@ The validator private key is unique to each validator node. The same key is <b>n
 The private key file mentioned for networking is used by libp2p to generate the corresponding PeerID, and allow the node to participate in the network.
 
 It is located in `keystore/libp2p.key`, and adheres to the [key format](/docs/edge/configuration/manage-private-keys#key-format) mentioned.
+
+## BLS Secret Key
+
+The private key file mentioned about BLS is used in the consensus layer to aggregate committed seals. The size of committed seals aggregated by BLS is less than the committed seals signed by ECDSA.
+
+BLS feature is optional and you can choose whether to use BLS or not. Refer [BLS](/docs/edge/consensus/bls) for more details.
 
 ## Import / Export
 

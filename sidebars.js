@@ -1010,7 +1010,8 @@ module.exports = {
               "edge/consensus/poa",
               "edge/consensus/pos-concepts",
               "edge/consensus/pos-stake-unstake",
-              "edge/consensus/migration-to-pos"
+              "edge/consensus/migration-to-pos",
+              "edge/consensus/bls"
           ]
       },
       {
